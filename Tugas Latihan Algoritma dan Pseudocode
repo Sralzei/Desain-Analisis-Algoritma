@@ -1,0 +1,112 @@
+//Pertanyaan//
+Tentukan algoritma dan pseudocode untuk :
+1. Cari nilai KPK dari 3 dan 4
+2. Fungsi untuk menukar posisi dua variabel x dan y, dengan kasus : 
+Ada 2 buah: manggis dan pisang. Manggis di piring 1, Pisang di piring 2. Piring 3 kosong.
+3. Diketahui sebuah segitiga memiliki ukuran sebagai berikut:
+Alas 25
+Tinggi 30
+Hitung luas dari segitiga tersebut.
+4. Tentukan algoritma dan pseudocode luas jajar genjang
+    (panjang = 5, tinggi = 3) 
+
+5. Tentukan algoritma dan pseudocode volume tabung (jari-jari = 3, tinggi = 5) 
+
+6. Tentukan algoritma dan pseudocode volume kerucut
+   (diameter = 5, tinggi = 4) 
+
+//Jawab//
+1. Algoritma:
+    Langkah 1: Ambil dua bilangan, misalnya 3 dan 4.
+    Langkah 2: Temukan nilai terbesar antara 3 dan 4, kemudian simpan sebagai max.
+    Langkah 3: Cek apakah max habis dibagi oleh kedua bilangan (3 dan 4).
+    Langkah 4: Jika tidak, tambahkan 1 pada max dan ulangi langkah 3.
+    Langkah 5: Jika max habis dibagi oleh kedua bilangan, maka itulah KPK.
+ 
+    Pseudocode:  
+    def KPK(a, b):
+    max_value = max(a, b)
+    while True:
+        if max_value % a == 0 and max_value % b == 0:
+            return max_value
+        max_value += 1
+
+    output = KPK(3, 4)
+    print(output)
+
+
+2. Algoritma:
+    Langkah 1: Gunakan variabel ketiga, yaitu a untuk menyimpan sementara salah satu nilai.
+    Langkah 2: Tukarkan nilai x dan y menggunakan variabel a.
+    Langkah 3: Hasilkan x dan y yang telah ditukar.
+  
+   Pseudocode:
+    def Tukar(x, y):
+    temp = x
+    x = y
+    y = temp
+    return x, y
+
+    piring1 = 'manggis'
+    piring2 = 'pisang'
+    piring1, piring2 = Tukar(piring1, piring2)
+    print(piring1, piring2)  # Output: pisang, manggis
+
+
+3. Algoritma:
+    Langkah 1: Tentukan terlebih dahulu nilai alas dan tinggi dari segitiga.
+    Langkah 2: Gunakan rumus luas segitiga, yaitu : L = (alas × tinggi) / 2.
+    Langkah 3: Hitung luas dan tampilkan hasilnya.
+   
+  Pseudocode:
+   def LuasSegitiga(alas, tinggi):
+    luas = (alas * tinggi) / 2
+    return luas
+
+    output = LuasSegitiga(25, 30)
+    print(output)  # Output: 375
+
+4. Algoritma:
+    Langkah 1: Tentukan terlebih dahulu nilai panjang alas dan tinggi jajar genjang.
+    Langkah 2: Gunakan rumus luas jajar genjang, yaitu : L = panjang × tinggi.
+    Langkah 3: Hitung luas dan tampilkan hasilnya.
+  Pseudocode:
+   
+   def LuasJajarGenjang(panjang, tinggi):
+    luas = panjang * tinggi
+    return luas
+
+    output = LuasJajarGenjang(5, 3)
+    print(output)  # Output: 15
+
+
+5. Algoritma:
+    Langkah 1: Tentukan terlebih dahulu nilai jari-jari dan tinggi tabung.
+    Langkah 2: Gunakan rumus volume tabung, yaitu : V = π × r^2 × tinggi.
+    Langkah 3: Hitung volume dan tampilkan hasilnya.
+ 
+   Pseudocode: 
+   def VolumeTabung(r, tinggi):
+    pi = 3.14159
+    volume = pi * r * r * tinggi
+    return volume
+
+    output = VolumeTabung(3, 5)
+    print(output)  # Output: 141.37155
+
+
+6. Algoritma:
+    Langkah 1: Tentukan diameter dan tinggi kerucut.
+    Langkah 2: Hitung jari-jari dari diameter: r = diameter / 2.
+    Langkah 3: Gunakan rumus volume kerucut: V = (1/3) × π × r^2 × tinggi.
+    Langkah 4: Hitung volume dan tampilkan hasilnya.
+ 
+   Pseudocode:
+    def VolumeKerucut(diameter, tinggi):
+    pi = 3.14159
+    r = diameter / 2
+    volume = (1/3) * pi * r * r * tinggi
+    return volume
+
+    output = VolumeKerucut(5, 4)
+    print(output)  # Output: 26.1799

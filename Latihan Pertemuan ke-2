@@ -1,0 +1,123 @@
+#Latihan#
+
+import numpy as np
+a = (1,2,3)
+b = (4,5,6)
+print(a+b)
+
+print("Hello, world!")
+print("nama saya:")
+nama = input()
+print("nim saya:")
+nim = input()
+
+if 5 > 2:
+  print("Five is greater than two!")
+
+x = 5
+y = "John"
+print(x)
+print(y)
+
+x = 4
+x = "Sally"
+print(x)
+
+import numpy as np
+
+nilai_siswa = np.array([85, 55, 60, 10])
+
+print(nilai_siswa[0])
+print(nilai_siswa[1])
+print(nilai_siswa[2])
+print(nilai_siswa[3])
+
+a = [1,2,3]
+b = [4,5,6]
+hasil = a + b
+def add(list_a, list_b):
+    result = []
+    for first, second in zip(list_a, list_b):
+        result.append(first + second)
+    return  result
+print(add(a,b))
+
+def getfirst(mylists):
+    return (mylists[0])
+getfirst([1,2,3,4,5,6,7,8,9])
+
+def getsecond(mylists):
+    return (mylists[1])
+getsecond([1,2,3,4,5,6,7,8,9])
+
+def getlast (mylists):
+    return (mylists[-1])
+getlast([1,2,3,4,5,6,7,8,9])
+
+from re import S
+def getsum(mylist):
+    sum = 0
+    for item in mylist:
+        sum = sum+item
+    return sum
+getsum([1,2,3,4,5,6,7,8,9])
+
+
+# getSum adalah perintah untuk mendapatkan hasil jumlah seluruh angka.Bagaimana jika kita membutuhkan fungsi getKali untuk mengalikan seluruh angka?
+def getKali(mylist):
+    hasil = 1
+    for item in mylist:
+        hasil *= item
+    return hasil
+
+    print(getKali([1,18,18]))
+
+# getSum adalah perintah untuk mendapatkan hasil jumlah seluruh angka. Bagaimana jika kita membutuhkan fungsi getBagi untuk membagikan seluruh angka?
+def getBagi(mylist):
+    if not mylist:
+        raise ValueError("Daftar tidak boleh kosong")
+    
+    hasil = mylist[0]
+    
+    for item in mylist[1:]:
+        if item == 0:
+            raise ValueError("Pembagian dengan nol tidak diizinkan")
+        hasil /= item
+
+    return hasil
+
+    print(getBagi([18, 5, 2]))
+
+# Buatlah suatu fungsi untuk membagi 2 himpunan angka, jika getSum untuk menjumlahkan angka!
+def getSum(mylist):
+    return sum(mylist)
+
+def bagiHimpunan(himpunan1, himpunan2):
+    jumlah1 = getSum(himpunan1)
+    jumlah2 = getSum(himpunan2)
+    
+    if jumlah2 == 0:
+        raise ValueError("Pembagi tidak boleh nol")
+    
+    return jumlah1 / jumlah2
+
+    himpunan1 = [18, 18, 28]
+    himpunan2 = [5, 5]
+    
+    print(bagiHimpunan(himpunan1, himpunan2))
+
+# Buatlah suatu fungsi untuk mengurangi 2 himpunan angka, jika getSum untuk menjumlahkan angka!
+def getSum(mylist):
+    return sum(mylist)
+
+def kurangiHimpunan(himpunan1, himpunan2):
+    jumlah1 = getSum(himpunan1)
+    jumlah2 = getSum(himpunan2)
+    
+    return jumlah1 - jumlah2
+
+    himpunan1 = [18, 18, 28]
+    himpunan2 = [5, 7]
+    
+    print(kurangiHimpunan(himpunan1, himpunan2)) 
+
